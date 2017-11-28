@@ -11,7 +11,8 @@ example
 > Python 3.5.1
 
 # Contents
-1. print()，know how to use with flush argument
+1. [print()](print().py)，know how to use with flush argument
+
 
 # license
 MIT license.
