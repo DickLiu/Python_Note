@@ -1,5 +1,5 @@
-# Python_Note
-- 紀錄學習過的Python 函數.py檔案
+# Python_Note  :coffee:
+- 紀錄學習過的Python 函數.py檔案 
 # Contents
 1. [print()](print().py)，know how to use with flush argument
 
