@@ -29,3 +29,26 @@ for value in value_list:
     b = func_handler(b, value)
 那就轉用 reduce 吧。
 '''
+
+# use reduce() with Django's Q object
+
+'''
+Poll.objects.filter(
+    Q(pub_date=date(2005, 5, 2)) | Q(pub_date=date(2005, 5, 6)) |
+    Q(question__startswith='Who')
+)
+
+if you operator.or_() and reduce(), you can make the above expression
+change like below
+
+from operator import or_
+
+Poll.objects.filter(
+    reduce(
+        or_,
+        [Q(pub_date=date(2005, 5, 2)), Q(pub_date=date(2005, 5, 6)),
+        Q(question__startswith='Who'])
+)
+
+'''
+
