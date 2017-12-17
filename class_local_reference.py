@@ -1,7 +1,10 @@
 import math
+import random
 
 class Circle(object):
     version = '0.5b'
+
+    __slots__ = ('radius')
 
     def __init__(self, radius):
         self.radius = radius
@@ -22,6 +25,15 @@ class Tire(Circle):
         return Circle.perimeter(self) * 1.25
 
     __perimeter = perimeter
+
+
+circles = (Circle(random.randint(1,99)) for i in range(1000))
+dict_list = []
+for i in circles:
+    dict_list.append(i)
+
+print(dict_list)
+    
 
 '''
 name mangling的原始意圖並不只是private purpose
